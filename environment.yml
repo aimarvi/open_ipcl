@@ -9,7 +9,6 @@ dependencies:
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=1_gnu
   - addict=2.3.0=py36h5fab9bb_2
-  - albumentations=1.0.3=py_0
   - backcall=0.2.0=pyh9f0ad1d_0
   - backports=1.0=py36_1
   - backports.functools_lru_cache=1.6.4=pyhd8ed1ab_0
@@ -71,7 +70,7 @@ dependencies:
   - ld_impl_linux-64=2.36.1=hea4e1c9_2
   - lerc=2.2.1=h9c3ff4c_0
   - libarchive=3.5.2=hccf745f_0
-  - libcurl=7.79.0=h2574ce0_0
+  - libcurl
   - libdeflate=1.7=h7f98852_5
   - libedit=3.1.20191231=he28a2e2_2
   - libev=4.33=h516909a_1
@@ -177,5 +176,5 @@ dependencies:
     - madgrad==1.1
     - numpy==1.19.5
     - pillow-simd==7.0.0.post3
-    - pyturbojpeg==1.1.2
+    - pyturbojpeg
 prefix: /n/home02/alvarez/.conda/envs/pytorch_v17

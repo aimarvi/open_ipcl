@@ -4,7 +4,7 @@ import torch.nn as nn
 from torchvision import transforms as T
 import numpy as np
 from PIL import Image
-from turbojpeg import TurboJPEG, TJPF, TJSAMP
+from turbojpeg import TurboJPEG # @aim: removed TJPM, TJSAMP imports
 from urllib.request import urlopen
 import matplotlib.pyplot as plt
 import cv2
@@ -31,7 +31,7 @@ def turbo_loader(file, to_rgb=True):
     with open(file, 'rb') as f:
         # have to install latest to access crop features:
         # buf = turbo.crop(f.read(), x=0, y=0, w=100, h=100, preserve=False, gray=True)
-        img = turbo.decode(f.read(), pixel_format=TJPF.RGB if to_rgb else TJPF.BGR)
+        img = turbo.decode(f.read(), pixel_format=TJPF_RGB if to_rgb else TJPF_BGR)
     return img
 
 def pil_loader(path):
@@ -106,7 +106,7 @@ def open_image_array(p, to_rgb=True):
 def download_image(url):
     data = urlopen(url).read()
     data = np.frombuffer(data, np.uint8)
-    img = turbo.decode(data, pixel_format=TJPF.RGB)
+    img = turbo.decode(data, pixel_format=TJPF_RGB)
     img = Image.fromarray(img)
     return img
 
